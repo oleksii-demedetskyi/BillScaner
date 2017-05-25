@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE6E6FCA1ED7706D005B4A59 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FC91ED7706D005B4A59 /* Bill.swift */; };
+		DE6E6FCC1ED77258005B4A59 /* BillPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FCB1ED77258005B4A59 /* BillPresenter.swift */; };
+		DE6E6FDD1ED77A39005B4A59 /* BillPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FCD1ED7779D005B4A59 /* BillPresenterTests.swift */; };
 		DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F481ED7669D00A76CE9 /* Info.plist */; };
-		DEBC1F4B1ED7669D00A76CE9 /* TestsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F491ED7669D00A76CE9 /* TestsInfo.plist */; };
 		DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */; };
 		DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4E1ED766CF00A76CE9 /* LaunchScreen.storyboard */; };
 		DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F501ED766CF00A76CE9 /* Main.storyboard */; };
@@ -17,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DEBC1F381ED75F6F00A76CE9 /* PBXContainerItemProxy */ = {
+		DE6E6FD81ED77A1C005B4A59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DEBC1F1B1ED75F6E00A76CE9 /* Project object */;
 			proxyType = 1;
@@ -27,10 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE6E6FC91ED7706D005B4A59 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		DE6E6FCB1ED77258005B4A59 /* BillPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillPresenter.swift; sourceTree = "<group>"; };
+		DE6E6FCD1ED7779D005B4A59 /* BillPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillPresenterTests.swift; sourceTree = "<group>"; };
+		DE6E6FD31ED77A1C005B4A59 /* BillScanerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillScanerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6E6FD71ED77A1C005B4A59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../BillScanerTests/Info.plist; sourceTree = "<group>"; };
 		DEBC1F231ED75F6E00A76CE9 /* BillScaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillScaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEBC1F371ED75F6F00A76CE9 /* BillScanerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillScanerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBC1F481ED7669D00A76CE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEBC1F491ED7669D00A76CE9 /* TestsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestsInfo.plist; sourceTree = "<group>"; };
 		DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEBC1F4F1ED766CF00A76CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEBC1F511ED766CF00A76CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,14 +44,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DEBC1F201ED75F6E00A76CE9 /* Frameworks */ = {
+		DE6E6FD01ED77A1C005B4A59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEBC1F341ED75F6F00A76CE9 /* Frameworks */ = {
+		DEBC1F201ED75F6E00A76CE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DEBC1F231ED75F6E00A76CE9 /* BillScaner.app */,
-				DEBC1F371ED75F6F00A76CE9 /* BillScanerUITests.xctest */,
+				DE6E6FD31ED77A1C005B4A59 /* BillScanerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				DEBC1F481ED7669D00A76CE9 /* Info.plist */,
-				DEBC1F491ED7669D00A76CE9 /* TestsInfo.plist */,
+				DE6E6FD71ED77A1C005B4A59 /* Info.plist */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -99,6 +104,9 @@
 			children = (
 				DEBC1F531ED766CF00A76CE9 /* AppDelegate.swift */,
 				DEBC1F541ED766CF00A76CE9 /* BillViewController.swift */,
+				DE6E6FC91ED7706D005B4A59 /* Bill.swift */,
+				DE6E6FCB1ED77258005B4A59 /* BillPresenter.swift */,
+				DE6E6FCD1ED7779D005B4A59 /* BillPresenterTests.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -106,6 +114,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE6E6FD21ED77A1C005B4A59 /* BillScanerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE6E6FDA1ED77A1C005B4A59 /* Build configuration list for PBXNativeTarget "BillScanerTests" */;
+			buildPhases = (
+				DE6E6FCF1ED77A1C005B4A59 /* Sources */,
+				DE6E6FD01ED77A1C005B4A59 /* Frameworks */,
+				DE6E6FD11ED77A1C005B4A59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE6E6FD91ED77A1C005B4A59 /* PBXTargetDependency */,
+			);
+			name = BillScanerTests;
+			productName = BillScanerTests;
+			productReference = DE6E6FD31ED77A1C005B4A59 /* BillScanerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DEBC1F221ED75F6E00A76CE9 /* BillScaner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEBC1F401ED75F6F00A76CE9 /* Build configuration list for PBXNativeTarget "BillScaner" */;
@@ -123,24 +149,6 @@
 			productReference = DEBC1F231ED75F6E00A76CE9 /* BillScaner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DEBC1F361ED75F6F00A76CE9 /* BillScanerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DEBC1F431ED75F6F00A76CE9 /* Build configuration list for PBXNativeTarget "BillScanerUITests" */;
-			buildPhases = (
-				DEBC1F331ED75F6F00A76CE9 /* Sources */,
-				DEBC1F341ED75F6F00A76CE9 /* Frameworks */,
-				DEBC1F351ED75F6F00A76CE9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DEBC1F391ED75F6F00A76CE9 /* PBXTargetDependency */,
-			);
-			name = BillScanerUITests;
-			productName = BillScanerUITests;
-			productReference = DEBC1F371ED75F6F00A76CE9 /* BillScanerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,15 +159,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Alexey Demedeckiy";
 				TargetAttributes = {
-					DEBC1F221ED75F6E00A76CE9 = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
-					};
-					DEBC1F361ED75F6F00A76CE9 = {
+					DE6E6FD21ED77A1C005B4A59 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = PXX8NZKYVV;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DEBC1F221ED75F6E00A76CE9;
+					};
+					DEBC1F221ED75F6E00A76CE9 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -177,12 +185,19 @@
 			projectRoot = "";
 			targets = (
 				DEBC1F221ED75F6E00A76CE9 /* BillScaner */,
-				DEBC1F361ED75F6F00A76CE9 /* BillScanerUITests */,
+				DE6E6FD21ED77A1C005B4A59 /* BillScanerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE6E6FD11ED77A1C005B4A59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBC1F211ED75F6E00A76CE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,43 +206,38 @@
 				DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */,
 				DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */,
 				DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */,
-				DEBC1F4B1ED7669D00A76CE9 /* TestsInfo.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEBC1F351ED75F6F00A76CE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE6E6FCF1ED77A1C005B4A59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE6E6FDD1ED77A39005B4A59 /* BillPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBC1F1F1ED75F6E00A76CE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DEBC1F581ED766CF00A76CE9 /* AppDelegate.swift in Sources */,
+				DE6E6FCC1ED77258005B4A59 /* BillPresenter.swift in Sources */,
+				DE6E6FCA1ED7706D005B4A59 /* Bill.swift in Sources */,
 				DEBC1F591ED766CF00A76CE9 /* BillViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEBC1F331ED75F6F00A76CE9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DEBC1F391ED75F6F00A76CE9 /* PBXTargetDependency */ = {
+		DE6E6FD91ED77A1C005B4A59 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DEBC1F221ED75F6E00A76CE9 /* BillScaner */;
-			targetProxy = DEBC1F381ED75F6F00A76CE9 /* PBXContainerItemProxy */;
+			targetProxy = DE6E6FD81ED77A1C005B4A59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -251,6 +261,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE6E6FDB1ED77A1C005B4A59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PXX8NZKYVV;
+				INFOPLIST_FILE = BillScanerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScanerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillScaner.app/BillScaner";
+			};
+			name = Debug;
+		};
+		DE6E6FDC1ED77A1C005B4A59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PXX8NZKYVV;
+				INFOPLIST_FILE = BillScanerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScanerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillScaner.app/BillScaner";
+			};
+			name = Release;
+		};
 		DEBC1F3E1ED75F6F00A76CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -372,37 +410,17 @@
 			};
 			name = Release;
 		};
-		DEBC1F441ED75F6F00A76CE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = PXX8NZKYVV;
-				INFOPLIST_FILE = support/TestsInfo.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScanerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = BillScaner;
-			};
-			name = Debug;
-		};
-		DEBC1F451ED75F6F00A76CE9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = PXX8NZKYVV;
-				INFOPLIST_FILE = support/TestsInfo.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScanerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = BillScaner;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE6E6FDA1ED77A1C005B4A59 /* Build configuration list for PBXNativeTarget "BillScanerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE6E6FDB1ED77A1C005B4A59 /* Debug */,
+				DE6E6FDC1ED77A1C005B4A59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DEBC1F1E1ED75F6E00A76CE9 /* Build configuration list for PBXProject "BillScaner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -419,14 +437,7 @@
 				DEBC1F421ED75F6F00A76CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		DEBC1F431ED75F6F00A76CE9 /* Build configuration list for PBXNativeTarget "BillScanerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DEBC1F441ED75F6F00A76CE9 /* Debug */,
-				DEBC1F451ED75F6F00A76CE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
