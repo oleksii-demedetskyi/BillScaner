@@ -13,7 +13,7 @@
 		DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4E1ED766CF00A76CE9 /* LaunchScreen.storyboard */; };
 		DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F501ED766CF00A76CE9 /* Main.storyboard */; };
 		DEBC1F581ED766CF00A76CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC1F531ED766CF00A76CE9 /* AppDelegate.swift */; };
-		DEBC1F591ED766CF00A76CE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC1F541ED766CF00A76CE9 /* ViewController.swift */; };
+		DEBC1F591ED766CF00A76CE9 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC1F541ED766CF00A76CE9 /* BillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		DEBC1F4F1ED766CF00A76CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEBC1F511ED766CF00A76CE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEBC1F531ED766CF00A76CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEBC1F541ED766CF00A76CE9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEBC1F541ED766CF00A76CE9 /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DEBC1F531ED766CF00A76CE9 /* AppDelegate.swift */,
-				DEBC1F541ED766CF00A76CE9 /* ViewController.swift */,
+				DEBC1F541ED766CF00A76CE9 /* BillViewController.swift */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBC1F581ED766CF00A76CE9 /* AppDelegate.swift in Sources */,
-				DEBC1F591ED766CF00A76CE9 /* ViewController.swift in Sources */,
+				DEBC1F591ED766CF00A76CE9 /* BillViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
