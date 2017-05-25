@@ -57,6 +57,7 @@ class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
     }
     
     var isAppeared = false
+    
     override func viewWillAppear(_ animated: Bool) {
         isAppeared = true
         if viewModel.codeSink != nil { captureSession.startRunning() }

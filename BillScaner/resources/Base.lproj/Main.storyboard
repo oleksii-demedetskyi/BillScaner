@@ -52,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSm-s1-aOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="-186"/>
+            <point key="canvasLocation" x="-92" y="-475"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uPQ-nL-WYV">
@@ -63,12 +63,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="01o-wB-Z13" kind="relationship" relationship="rootViewController" id="mjF-ZJ-BnT"/>
+                        <segue destination="Bqx-Ac-YNN" kind="relationship" relationship="rootViewController" id="zP4-R4-1Yv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9h-c2-zQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-929" y="-185"/>
+        </scene>
+        <!--Scaner View Controller-->
+        <scene sceneID="U4I-HT-EwQ">
+            <objects>
+                <viewController id="Bqx-Ac-YNN" customClass="QRScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="naf-Qe-od5"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvw-ua-TuI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Te4-mU-TFt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="opS-wj-OPS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xA-ag-XLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="239"/>
         </scene>
     </scenes>
 </document>
