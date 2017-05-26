@@ -13,6 +13,8 @@
 		DE6E6FDF1ED77B7C005B4A59 /* BillJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FDE1ED77B7C005B4A59 /* BillJSONParser.swift */; };
 		DE6E6FE11ED77F4F005B4A59 /* BillJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FE01ED77F4F005B4A59 /* BillJSONParserTests.swift */; };
 		DE6E6FE31ED782E8005B4A59 /* QRScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FE21ED782E8005B4A59 /* QRScanerViewController.swift */; };
+		DE6E6FE51ED7E8D0005B4A59 /* TestScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FE41ED7E8D0005B4A59 /* TestScanerViewController.swift */; };
+		DE6E6FE71ED7E9B9005B4A59 /* TestJSONPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = DE6E6FE61ED7E9B9005B4A59 /* TestJSONPayload.json */; };
 		DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F481ED7669D00A76CE9 /* Info.plist */; };
 		DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */; };
 		DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4E1ED766CF00A76CE9 /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 		DE6E6FDE1ED77B7C005B4A59 /* BillJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillJSONParser.swift; sourceTree = "<group>"; };
 		DE6E6FE01ED77F4F005B4A59 /* BillJSONParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillJSONParserTests.swift; sourceTree = "<group>"; };
 		DE6E6FE21ED782E8005B4A59 /* QRScanerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanerViewController.swift; sourceTree = "<group>"; };
+		DE6E6FE41ED7E8D0005B4A59 /* TestScanerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScanerViewController.swift; sourceTree = "<group>"; };
+		DE6E6FE61ED7E9B9005B4A59 /* TestJSONPayload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestJSONPayload.json; sourceTree = "<group>"; };
 		DEBC1F231ED75F6E00A76CE9 /* BillScaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillScaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBC1F481ED7669D00A76CE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				DE6E6FDE1ED77B7C005B4A59 /* BillJSONParser.swift */,
 				DE6E6FE01ED77F4F005B4A59 /* BillJSONParserTests.swift */,
 				DE6E6FE21ED782E8005B4A59 /* QRScanerViewController.swift */,
+				DE6E6FE41ED7E8D0005B4A59 /* TestScanerViewController.swift */,
+				DE6E6FE61ED7E9B9005B4A59 /* TestJSONPayload.json */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */,
 				DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */,
 				DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */,
+				DE6E6FE71ED7E9B9005B4A59 /* TestJSONPayload.json in Resources */,
 				DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6E6FE51ED7E8D0005B4A59 /* TestScanerViewController.swift in Sources */,
 				DEBC1F581ED766CF00A76CE9 /* AppDelegate.swift in Sources */,
 				DE6E6FCC1ED77258005B4A59 /* BillPresenter.swift in Sources */,
 				DE6E6FE31ED782E8005B4A59 /* QRScanerViewController.swift in Sources */,

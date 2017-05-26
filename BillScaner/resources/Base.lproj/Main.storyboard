@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,6 +54,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSm-s1-aOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92" y="-475"/>
+        </scene>
+        <!--Test Scaner View Controller-->
+        <scene sceneID="6Vh-U4-tNg">
+            <objects>
+                <viewController id="Wek-PA-TCf" customClass="TestScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CqK-cd-SK2"/>
+                        <viewControllerLayoutGuide type="bottom" id="yVn-2E-hsZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ipf-rf-eXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-Kj-xlT">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hl-Vd-Drg">
+                                        <rect key="frame" x="106" y="0.0" width="131" height="215.5"/>
+                                        <state key="normal" title="Test JSON payload"/>
+                                        <connections>
+                                            <action selector="testJSONPayload" destination="Wek-PA-TCf" eventType="touchUpInside" id="CGJ-vm-Dcr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f63-HW-DHz">
+                                        <rect key="frame" x="110" y="215.5" width="123" height="216"/>
+                                        <state key="normal" title="Test XML payload"/>
+                                        <connections>
+                                            <action selector="testXMLPayload" destination="Wek-PA-TCf" eventType="touchUpInside" id="DZJ-Bw-phB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDx-Oq-GRw">
+                                        <rect key="frame" x="111.5" y="431.5" width="120" height="215.5"/>
+                                        <state key="normal" title="Test URL Payload"/>
+                                        <connections>
+                                            <action selector="testURLPayload" destination="Wek-PA-TCf" eventType="touchUpInside" id="PlP-Y5-ViA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lx5-Kj-xlT" firstAttribute="leading" secondItem="ipf-rf-eXc" secondAttribute="leadingMargin" id="7fb-fn-DbL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lx5-Kj-xlT" secondAttribute="trailing" id="NnO-Zu-VDj"/>
+                            <constraint firstItem="Lx5-Kj-xlT" firstAttribute="top" secondItem="CqK-cd-SK2" secondAttribute="bottom" id="TpV-p8-auk"/>
+                            <constraint firstItem="yVn-2E-hsZ" firstAttribute="top" secondItem="Lx5-Kj-xlT" secondAttribute="bottom" id="gp9-Wi-L0n"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5L-5n-fol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="-82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uPQ-nL-WYV">

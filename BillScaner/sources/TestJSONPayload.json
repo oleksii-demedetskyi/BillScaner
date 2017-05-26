@@ -1,0 +1,6 @@
+{
+    "cake_id": {"name": "cake", "price": 1.99, "quantity": 2},
+    "coffee_id": {"name": "coffee", "price": 1.39, "quantity": 1},
+    "juice_id": {"name": "juice", "price": 1.45, "quantity": 1},
+    "scrumble_id": {"name": "scrumble", "price": 2.99, "quantity": 2}
+}
