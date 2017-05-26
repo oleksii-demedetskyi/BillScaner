@@ -13,7 +13,7 @@
         <!--Bill details-->
         <scene sceneID="MJT-Rc-sFt">
             <objects>
-                <tableViewController id="01o-wB-Z13" customClass="BillViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Bill details" id="01o-wB-Z13" customClass="BillViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="T00-4N-YAX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,12 +53,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSm-s1-aOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="-475"/>
+            <point key="canvasLocation" x="1130" y="-154"/>
         </scene>
-        <!--Test Scaner View Controller-->
+        <!--Demo payloads-->
         <scene sceneID="6Vh-U4-tNg">
             <objects>
-                <viewController id="Wek-PA-TCf" customClass="TestScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test scaner" title="Demo payloads" id="Wek-PA-TCf" customClass="TestScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CqK-cd-SK2"/>
                         <viewControllerLayoutGuide type="bottom" id="yVn-2E-hsZ"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5L-5n-fol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="-82"/>
+            <point key="canvasLocation" x="-92" y="-509"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uPQ-nL-WYV">
@@ -115,18 +115,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="Bqx-Ac-YNN" kind="relationship" relationship="rootViewController" id="zP4-R4-1Yv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9h-c2-zQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-929" y="-185"/>
         </scene>
-        <!--Scaner View Controller-->
+        <!--QR Code scaner-->
         <scene sceneID="U4I-HT-EwQ">
             <objects>
-                <viewController id="Bqx-Ac-YNN" customClass="QRScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QR scaner" title="QR Code scaner" id="Bqx-Ac-YNN" customClass="QRScanerViewController" customModule="BillScaner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="naf-Qe-od5"/>
                         <viewControllerLayoutGuide type="bottom" id="gvw-ua-TuI"/>

@@ -8,13 +8,60 @@
 
 import UIKit
 
+#if (arch(i386) || arch(x86_64))
+    let isSimulator = true
+#else
+    let isSimulator = false
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {    
-        return true
+    func application(
+        _ application: UIApplication,
+        willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil)
+        -> Bool {
+            
+            guard let navigation = window?.rootViewController as? UINavigationController else {
+                return false
+            }
+            
+            let scanerViewModel = QRScanerViewController.ViewModel { payload in
+                if
+                    let data = payload.data(using: .utf8),
+                    let json = try? JSONSerialization.jsonObject(with: data),
+                    let bill = try? Bill(json: json)
+                {
+                    guard let billViewController = navigation.storyboard?.instantiateViewController(
+                        withIdentifier: "Bill details") as? BillViewController else {
+                            fatalError("Cannot instantiate bill details")
+                    }
+                    
+                    billViewController.viewModel = .init(bill: bill)
+                    navigation.pushViewController(billViewController, animated: true)
+                }
+            }
+            
+            if isSimulator {
+                guard let testScaner = navigation.storyboard?.instantiateViewController(
+                    withIdentifier: "Test scaner") as? TestScanerViewController else {
+                        fatalError("Cannot instantiate test scaner")
+                }
+                
+                testScaner.viewModel = scanerViewModel
+                navigation.viewControllers = [testScaner]
+            } else {
+                guard let qrScaner = navigation.storyboard?.instantiateViewController(
+                    withIdentifier: "QR scaner") as? QRScanerViewController else {
+                        fatalError("Cannot instantiate qr scaner")
+                }
+                
+                qrScaner.viewModel = scanerViewModel
+                navigation.viewControllers = [qrScaner]
+            }
+            
+            return true
     }
 }
 
