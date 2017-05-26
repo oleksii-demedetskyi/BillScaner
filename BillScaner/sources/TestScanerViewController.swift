@@ -12,15 +12,19 @@ class TestScanerViewController: UIViewController {
     var viewModel = QRScanerViewController.ViewModel(codeSink: nil)
     
     @IBAction func testJSONPayload() {
-        let payload = try! String(
-            contentsOfFile: Bundle.main.path(forResource: "TestJSONPayload", ofType: "json")!
+        let payload = try! Data(
+            contentsOf: Bundle.main.url(forResource: "TestJSONPayload", withExtension: "json")!
         )
         
         viewModel.codeSink?(payload)
     }
     
     @IBAction func testXMLPayload() {
+        let payload = try! Data(
+            contentsOf: Bundle.main.url(forResource: "TestXMLPayload", withExtension: "xml")!
+        )
         
+        viewModel.codeSink?(payload)
     }
     
     @IBAction func testURLPayload() {

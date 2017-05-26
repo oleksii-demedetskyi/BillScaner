@@ -28,11 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             let scanerViewModel = QRScanerViewController.ViewModel { payload in
-                if
-                    let data = payload.data(using: .utf8),
-                    let json = try? JSONSerialization.jsonObject(with: data),
-                    let bill = try? Bill(json: json)
-                {
+                var bill: Bill?
+                
+                if bill == nil  {
+                    bill = try? Bill(json: JSONSerialization.jsonObject(with: payload))
+                }
+                
+                if bill == nil {
+                    bill = try? Bill(xml: payload)
+                }
+                
+                if let bill = bill {
                     guard let billViewController = navigation.storyboard?.instantiateViewController(
                         withIdentifier: "Bill details") as? BillViewController else {
                             fatalError("Cannot instantiate bill details")
@@ -41,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     billViewController.viewModel = .init(bill: bill)
                     navigation.pushViewController(billViewController, animated: true)
                 }
+                
             }
             
             if isSimulator {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bill>
+    <cake_id>
+        <name>cake</name>
+        <price>1.99</price>
+        <quantity>2</quantity>
+    </cake_id>
+    <coffee_id>
+        <name>coffee</name>
+        <price>1.39</price>
+        <quantity>1</quantity>
+    </coffee_id>
+    <juice_id>
+        <name>juice</name>
+        <price>1.45</price>
+        <quantity>1</quantity>
+    </juice_id>
+    <scrumble_id>
+        <name>scrumble</name>
+        <price>2.99</price>
+        <quantity>2</quantity>
+    </scrumble_id>
+</bill>

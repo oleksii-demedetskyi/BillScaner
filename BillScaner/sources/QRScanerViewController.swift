@@ -12,7 +12,7 @@ import AVFoundation
 class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     struct ViewModel {
-        var codeSink: ((String) -> Void)?
+        var codeSink: ((Data) -> Void)?
     }
     
     var viewModel: ViewModel = ViewModel(codeSink: nil) {
@@ -79,8 +79,9 @@ class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
             else { return }
         
         guard let sink = viewModel.codeSink else { return }
+        guard let data = qrCode.stringValue.data(using: .utf8) else { return }
         
-        sink(qrCode.stringValue)
+        sink(data)
     }
     
 }
