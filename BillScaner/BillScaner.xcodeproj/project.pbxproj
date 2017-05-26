@@ -18,6 +18,7 @@
 		DE6E6FE91ED80C05005B4A59 /* BillXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FE81ED80C05005B4A59 /* BillXMLParser.swift */; };
 		DE6E6FEB1ED80CC2005B4A59 /* TestXMLPayload.xml in Resources */ = {isa = PBXBuildFile; fileRef = DE6E6FEA1ED80CC2005B4A59 /* TestXMLPayload.xml */; };
 		DE6E6FED1ED80E53005B4A59 /* BillXMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FEC1ED80E53005B4A59 /* BillXMLParserTests.swift */; };
+		DE6E6FEF1ED83E0A005B4A59 /* PayloadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FEE1ED83E0A005B4A59 /* PayloadParser.swift */; };
 		DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F481ED7669D00A76CE9 /* Info.plist */; };
 		DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */; };
 		DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4E1ED766CF00A76CE9 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		DE6E6FE81ED80C05005B4A59 /* BillXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillXMLParser.swift; sourceTree = "<group>"; };
 		DE6E6FEA1ED80CC2005B4A59 /* TestXMLPayload.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestXMLPayload.xml; sourceTree = "<group>"; };
 		DE6E6FEC1ED80E53005B4A59 /* BillXMLParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillXMLParserTests.swift; sourceTree = "<group>"; };
+		DE6E6FEE1ED83E0A005B4A59 /* PayloadParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadParser.swift; sourceTree = "<group>"; };
 		DEBC1F231ED75F6E00A76CE9 /* BillScaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillScaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBC1F481ED7669D00A76CE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				DE6E6FCD1ED7779D005B4A59 /* BillPresenterTests.swift */,
 				DE6E6FDE1ED77B7C005B4A59 /* BillJSONParser.swift */,
 				DE6E6FE01ED77F4F005B4A59 /* BillJSONParserTests.swift */,
+				DE6E6FEE1ED83E0A005B4A59 /* PayloadParser.swift */,
 				DE6E6FE21ED782E8005B4A59 /* QRScanerViewController.swift */,
 				DE6E6FE41ED7E8D0005B4A59 /* TestScanerViewController.swift */,
 				DE6E6FE61ED7E9B9005B4A59 /* TestJSONPayload.json */,
@@ -255,6 +258,7 @@
 				DE6E6FE51ED7E8D0005B4A59 /* TestScanerViewController.swift in Sources */,
 				DEBC1F581ED766CF00A76CE9 /* AppDelegate.swift in Sources */,
 				DE6E6FCC1ED77258005B4A59 /* BillPresenter.swift in Sources */,
+				DE6E6FEF1ED83E0A005B4A59 /* PayloadParser.swift in Sources */,
 				DE6E6FE31ED782E8005B4A59 /* QRScanerViewController.swift in Sources */,
 				DE6E6FCA1ED7706D005B4A59 /* Bill.swift in Sources */,
 				DEBC1F591ED766CF00A76CE9 /* BillViewController.swift in Sources */,

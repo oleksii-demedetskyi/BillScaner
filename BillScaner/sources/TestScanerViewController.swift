@@ -28,6 +28,8 @@ class TestScanerViewController: UIViewController {
     }
     
     @IBAction func testURLPayload() {
-        
+        let url = "https://ios-devchallenge-11.firebaseio.com/order_id.json"
+        let payload = url.data(using: .utf8)!
+        viewModel.codeSink?(payload)
     }
 }

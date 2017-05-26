@@ -16,6 +16,10 @@ extension Bill {
         case itemIsIncorrect([String: Any])
     }
     
+    init(json payload: Data) throws {
+        try self.init(json: JSONSerialization.jsonObject(with: payload))
+    }
+    
     init(json jsonObject: Any) throws {
         guard let json = jsonObject as? [String: Any] else {
             throw JSONParsingError.jsonIsNotAnObject(jsonObject)

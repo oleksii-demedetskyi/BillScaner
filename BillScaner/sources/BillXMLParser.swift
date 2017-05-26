@@ -60,6 +60,10 @@ class BillParserDelegate: NSObject, XMLParserDelegate {
                 namespaceURI: String?,
                 qualifiedName qName: String?)
     {
+        if elementName == "bill" {
+            result = .items(items)
+        }
+        
         guard elementName == currentElementID else { return }
      
         currentElementID = nil
@@ -76,10 +80,6 @@ class BillParserDelegate: NSObject, XMLParserDelegate {
     
     func parsingFailed(_ parser: XMLParser) {
         parser.abortParsing()
-    }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {
-        result = .items(items)
     }
 }
 
