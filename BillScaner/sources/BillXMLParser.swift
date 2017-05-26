@@ -16,6 +16,7 @@ class BillParserDelegate: NSObject, XMLParserDelegate {
     enum Result {
         case error(Error), items([Bill.Item])
     }
+    
     var result: Result = .error(.documentNotFinished)
     
     var items: [Bill.Item] = []

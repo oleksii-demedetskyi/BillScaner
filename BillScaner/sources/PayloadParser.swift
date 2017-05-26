@@ -16,7 +16,9 @@ func parse(payload: Data, callback: @escaping (Bill?) -> Void) {
             guard response.statusCode == 200 else { return }
             guard let data = data else { return }
             
-            parse(payload: data, callback: callback)
+            DispatchQueue.main.async {
+                parse(payload: data, callback: callback)
+            }
         }
         task.resume()
     } else if let bill = try? Bill(xml: payload) {

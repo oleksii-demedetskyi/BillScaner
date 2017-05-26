@@ -19,7 +19,6 @@
 		DE6E6FEB1ED80CC2005B4A59 /* TestXMLPayload.xml in Resources */ = {isa = PBXBuildFile; fileRef = DE6E6FEA1ED80CC2005B4A59 /* TestXMLPayload.xml */; };
 		DE6E6FED1ED80E53005B4A59 /* BillXMLParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FEC1ED80E53005B4A59 /* BillXMLParserTests.swift */; };
 		DE6E6FEF1ED83E0A005B4A59 /* PayloadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6E6FEE1ED83E0A005B4A59 /* PayloadParser.swift */; };
-		DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F481ED7669D00A76CE9 /* Info.plist */; };
 		DEBC1F551ED766CF00A76CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4D1ED766CF00A76CE9 /* Assets.xcassets */; };
 		DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F4E1ED766CF00A76CE9 /* LaunchScreen.storyboard */; };
 		DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC1F501ED766CF00A76CE9 /* Main.storyboard */; };
@@ -194,6 +193,7 @@
 					};
 					DEBC1F221ED75F6E00A76CE9 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = PXX8NZKYVV;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -229,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBC1F4A1ED7669D00A76CE9 /* Info.plist in Resources */,
 				DEBC1F571ED766CF00A76CE9 /* Main.storyboard in Resources */,
 				DE6E6FEB1ED80CC2005B4A59 /* TestXMLPayload.xml in Resources */,
 				DEBC1F561ED766CF00A76CE9 /* LaunchScreen.storyboard in Resources */,
@@ -423,7 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PXX8NZKYVV;
 				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScaner;
@@ -437,7 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PXX8NZKYVV;
 				INFOPLIST_FILE = "$(SRCROOT)/support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexey.demedeckiy.BillScaner;

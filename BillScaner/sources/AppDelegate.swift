@@ -27,19 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return false
             }
             
-            let scanerViewModel = QRScanerViewController.ViewModel { payload in
+            var isProcessing = false
+            
+            let viewModel = QRScanerViewController.ViewModel { payload in
+                guard isProcessing == false else { return }
+                isProcessing = true
+                
                 parse(payload: payload) {
+                    defer { isProcessing = false }
                     guard let bill = $0 else { return }
-                    
-                    DispatchQueue.main.async {
-                        guard let billViewController = navigation.storyboard?.instantiateViewController(
-                            withIdentifier: "Bill details") as? BillViewController else {
-                                fatalError("Cannot instantiate bill details")
-                        }
-                        
-                        billViewController.viewModel = .init(bill: bill)
-                        navigation.pushViewController(billViewController, animated: true)
+                    guard let billViewController = navigation.storyboard?.instantiateViewController(
+                        withIdentifier: "Bill details") as? BillViewController else {
+                            fatalError("Cannot instantiate bill details")
                     }
+                    
+                    billViewController.viewModel = .init(bill: bill)
+                    navigation.pushViewController(billViewController, animated: true)
                 }
             }
             
@@ -49,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         fatalError("Cannot instantiate test scaner")
                 }
                 
-                testScaner.viewModel = scanerViewModel
+                testScaner.viewModel = viewModel
                 navigation.viewControllers = [testScaner]
             } else {
                 guard let qrScaner = navigation.storyboard?.instantiateViewController(
@@ -57,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         fatalError("Cannot instantiate qr scaner")
                 }
                 
-                qrScaner.viewModel = scanerViewModel
+                qrScaner.viewModel = viewModel
                 navigation.viewControllers = [qrScaner]
             }
             

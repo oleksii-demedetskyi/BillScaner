@@ -9,14 +9,14 @@
 import UIKit
 
 class TestScanerViewController: UIViewController {
-    var viewModel = QRScanerViewController.ViewModel(codeSink: nil)
+    var viewModel = QRScanerViewController.ViewModel { _ in }
     
     @IBAction func testJSONPayload() {
         let payload = try! Data(
             contentsOf: Bundle.main.url(forResource: "TestJSONPayload", withExtension: "json")!
         )
         
-        viewModel.codeSink?(payload)
+        viewModel.processPayload(payload)
     }
     
     @IBAction func testXMLPayload() {
@@ -24,12 +24,12 @@ class TestScanerViewController: UIViewController {
             contentsOf: Bundle.main.url(forResource: "TestXMLPayload", withExtension: "xml")!
         )
         
-        viewModel.codeSink?(payload)
+        viewModel.processPayload(payload)
     }
     
     @IBAction func testURLPayload() {
         let url = "https://ios-devchallenge-11.firebaseio.com/order_id.json"
         let payload = url.data(using: .utf8)!
-        viewModel.codeSink?(payload)
+        viewModel.processPayload(payload)
     }
 }

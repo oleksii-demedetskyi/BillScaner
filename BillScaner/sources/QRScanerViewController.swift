@@ -12,26 +12,10 @@ import AVFoundation
 class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     struct ViewModel {
-        var codeSink: ((Data) -> Void)?
+        var processPayload: (Data) -> Void
     }
     
-    var viewModel: ViewModel = ViewModel(codeSink: nil) {
-        didSet {
-            if isAppeared &&
-                viewModel.codeSink != nil &&
-                oldValue.codeSink == nil
-            {
-                captureSession.startRunning()
-            }
-            
-            if isAppeared &&
-                oldValue.codeSink != nil &&
-                viewModel.codeSink == nil
-            {
-                captureSession.stopRunning()
-            }
-        }
-    }
+    var viewModel = ViewModel { _ in }
     
     let captureSession = AVCaptureSession()
     
@@ -43,10 +27,10 @@ class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         captureSession.addInput(input)
         
         let captureMetadataOutput = AVCaptureMetadataOutput()
+        captureSession.addOutput(captureMetadataOutput)
+        
         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
-        
-        captureSession.addOutput(captureMetadataOutput)
         
         guard let videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession) else {
             fatalError("Cannot instantiate preview layer")
@@ -56,32 +40,27 @@ class QRScanerViewController: UIViewController, AVCaptureMetadataOutputObjectsDe
         view.layer.addSublayer(videoPreviewLayer)
     }
     
-    var isAppeared = false
-    
     override func viewWillAppear(_ animated: Bool) {
-        isAppeared = true
-        if viewModel.codeSink != nil { captureSession.startRunning() }
+        captureSession.startRunning()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        isAppeared = false
+    /// We need to stop it before animation will start.
+    override func viewWillDisappear(_ animated: Bool) {
         captureSession.stopRunning()
     }
     
-    @nonobjc func captureOutput(captureOutput: AVCaptureOutput!,
-                       didOutputMetadataObjects metadataObjects: [AnyObject]!,
-                       fromConnection connection: AVCaptureConnection!) {
-        
+    func captureOutput(_ captureOutput: AVCaptureOutput!,
+                       didOutputMetadataObjects metadataObjects: [Any]!,
+                       from connection: AVCaptureConnection!)
+    {
         guard let metadataObjects = metadataObjects as? [AVMetadataMachineReadableCodeObject]
             else { return }
         
         guard let qrCode = metadataObjects.first(where: { $0.type == AVMetadataObjectTypeQRCode })
             else { return }
         
-        guard let sink = viewModel.codeSink else { return }
         guard let data = qrCode.stringValue.data(using: .utf8) else { return }
         
-        sink(data)
+        DispatchQueue.main.async { self.viewModel.processPayload(data) }
     }
-    
 }
